@@ -17,6 +17,12 @@
 		6801F16E2C6DFB86003737C5 /* KJImageCompressionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F16D2C6DFB86003737C5 /* KJImageCompressionTests.m */; };
 		6801F1782C6DFB86003737C5 /* KJImageCompressionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F1772C6DFB86003737C5 /* KJImageCompressionUITests.m */; };
 		6801F17A2C6DFB86003737C5 /* KJImageCompressionUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F1792C6DFB86003737C5 /* KJImageCompressionUITestsLaunchTests.m */; };
+		6801F1882C6DFC08003737C5 /* KJImageCompressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F1872C6DFC08003737C5 /* KJImageCompressVC.m */; };
+		6801F18D2C6DFC8F003737C5 /* NSData+ImageFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F18C2C6DFC8F003737C5 /* NSData+ImageFormat.m */; };
+		6801F1902C6DFCB5003737C5 /* UIImage+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801F18F2C6DFCB5003737C5 /* UIImage+Compression.m */; };
+		6801F1942C6E0CE9003737C5 /* png.png in Resources */ = {isa = PBXBuildFile; fileRef = 6801F1912C6E0CE9003737C5 /* png.png */; };
+		6801F1952C6E0CE9003737C5 /* jpg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6801F1922C6E0CE9003737C5 /* jpg.jpg */; };
+		6801F1962C6E0CE9003737C5 /* gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6801F1932C6E0CE9003737C5 /* gif.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,15 @@
 		6801F1732C6DFB86003737C5 /* KJImageCompressionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJImageCompressionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6801F1772C6DFB86003737C5 /* KJImageCompressionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJImageCompressionUITests.m; sourceTree = "<group>"; };
 		6801F1792C6DFB86003737C5 /* KJImageCompressionUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJImageCompressionUITestsLaunchTests.m; sourceTree = "<group>"; };
+		6801F1862C6DFC08003737C5 /* KJImageCompressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJImageCompressVC.h; sourceTree = "<group>"; };
+		6801F1872C6DFC08003737C5 /* KJImageCompressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJImageCompressVC.m; sourceTree = "<group>"; };
+		6801F18B2C6DFC8F003737C5 /* NSData+ImageFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageFormat.h"; sourceTree = "<group>"; };
+		6801F18C2C6DFC8F003737C5 /* NSData+ImageFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageFormat.m"; sourceTree = "<group>"; };
+		6801F18E2C6DFCB5003737C5 /* UIImage+Compression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compression.h"; sourceTree = "<group>"; };
+		6801F18F2C6DFCB5003737C5 /* UIImage+Compression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compression.m"; sourceTree = "<group>"; };
+		6801F1912C6E0CE9003737C5 /* png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png.png; sourceTree = "<group>"; };
+		6801F1922C6E0CE9003737C5 /* jpg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jpg.jpg; sourceTree = "<group>"; };
+		6801F1932C6E0CE9003737C5 /* gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +119,16 @@
 		6801F1502C6DFB84003737C5 /* KJImageCompression */ = {
 			isa = PBXGroup;
 			children = (
+				6801F18A2C6DFC41003737C5 /* Category */,
+				6801F1892C6DFC2A003737C5 /* Resource */,
 				6801F1512C6DFB84003737C5 /* AppDelegate.h */,
 				6801F1522C6DFB84003737C5 /* AppDelegate.m */,
 				6801F1542C6DFB84003737C5 /* SceneDelegate.h */,
 				6801F1552C6DFB84003737C5 /* SceneDelegate.m */,
 				6801F1572C6DFB84003737C5 /* ViewController.h */,
 				6801F1582C6DFB84003737C5 /* ViewController.m */,
+				6801F1862C6DFC08003737C5 /* KJImageCompressVC.h */,
+				6801F1872C6DFC08003737C5 /* KJImageCompressVC.m */,
 				6801F15A2C6DFB84003737C5 /* Main.storyboard */,
 				6801F15D2C6DFB86003737C5 /* Assets.xcassets */,
 				6801F15F2C6DFB86003737C5 /* LaunchScreen.storyboard */,
@@ -134,6 +153,27 @@
 				6801F1792C6DFB86003737C5 /* KJImageCompressionUITestsLaunchTests.m */,
 			);
 			path = KJImageCompressionUITests;
+			sourceTree = "<group>";
+		};
+		6801F1892C6DFC2A003737C5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6801F1912C6E0CE9003737C5 /* png.png */,
+				6801F1922C6E0CE9003737C5 /* jpg.jpg */,
+				6801F1932C6E0CE9003737C5 /* gif.gif */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6801F18A2C6DFC41003737C5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6801F18B2C6DFC8F003737C5 /* NSData+ImageFormat.h */,
+				6801F18C2C6DFC8F003737C5 /* NSData+ImageFormat.m */,
+				6801F18E2C6DFCB5003737C5 /* UIImage+Compression.h */,
+				6801F18F2C6DFCB5003737C5 /* UIImage+Compression.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +279,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6801F1962C6E0CE9003737C5 /* gif.gif in Resources */,
 				6801F1612C6DFB86003737C5 /* LaunchScreen.storyboard in Resources */,
+				6801F1942C6E0CE9003737C5 /* png.png in Resources */,
+				6801F1952C6E0CE9003737C5 /* jpg.jpg in Resources */,
 				6801F15E2C6DFB86003737C5 /* Assets.xcassets in Resources */,
 				6801F15C2C6DFB84003737C5 /* Main.storyboard in Resources */,
 			);
@@ -268,8 +311,11 @@
 			files = (
 				6801F1592C6DFB84003737C5 /* ViewController.m in Sources */,
 				6801F1532C6DFB84003737C5 /* AppDelegate.m in Sources */,
+				6801F1902C6DFCB5003737C5 /* UIImage+Compression.m in Sources */,
 				6801F1642C6DFB86003737C5 /* main.m in Sources */,
+				6801F1882C6DFC08003737C5 /* KJImageCompressVC.m in Sources */,
 				6801F1562C6DFB84003737C5 /* SceneDelegate.m in Sources */,
+				6801F18D2C6DFC8F003737C5 /* NSData+ImageFormat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
