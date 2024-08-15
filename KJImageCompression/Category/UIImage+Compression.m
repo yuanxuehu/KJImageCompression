@@ -34,6 +34,7 @@
     
     KJImageFormat imageFormat = [NSData kj_imageFormatWithImageData:imageData];
     if (imageFormat == KJImageFormatPNG) {
+        //核心代码：png图片压缩
         UIImage *image = [UIImage imageWithData:imageData];
         while (imageData.length > specifySize) {
             CGFloat targetWidth = image.size.width * 0.9;
@@ -50,6 +51,7 @@
     }
     
     if (imageFormat == KJImageFormatJPEG) {
+        //核心代码：JPEG图片压缩
         UIImage *resultImage = [UIImage imageWithData:imageData];
         while (imageData.length > specifySize) {
             CGFloat ratio = (CGFloat)specifySize / imageData.length;
@@ -70,6 +72,7 @@
     }
     
     if (imageFormat == KJImageFormatGIF) {
+        //核心代码：gif图片压缩
         CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)imageData, NULL);
         size_t count = CGImageSourceGetCount(source);
         NSTimeInterval duration = count * (1 / 30.0);
